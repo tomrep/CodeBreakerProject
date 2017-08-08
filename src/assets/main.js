@@ -37,5 +37,17 @@ function validateInput(input) {
     }
 }
 
-function getResults() {
+function getResults(result) {
+    let results = document.getEleemntById('results');
+    let div = '<div class="row"><span class="col-md-6">' + result + '</span><div class="col-md-6">'
+    for(let i = 0; i < 4; i++) {
+        if(result.charAt(i) === answer.value.charAt(i)) {
+            div+= '<span class="glyphicon glyphicon-ok"></span>';
+        } else if (answer.value.indexOf(result.charAt(i)) === -1) {
+            div+= '<span class="glyphicon glyphicon-remove"></span>';
+        } else {
+            div+= '<span class="glyphicon glyphicon-transfer"></span>';
+        }
+    }
+    div += '</div></div>'
 }
