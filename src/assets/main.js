@@ -61,7 +61,7 @@ function getResults(result) {
         }
     }
     div += '</div></div>';
-    results.innerHTML.append(div);
+    results.innerHTML += div;
     if(count === 4) {
         return true;
     } else {
