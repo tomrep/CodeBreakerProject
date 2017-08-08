@@ -5,5 +5,14 @@ function guess() {
     let input = document.getElementById('user-guess');
     //add functionality to guess function here
 }
-
+function setHiddenFields() {
+    let res = "";
+    for(let i = 0; i < 3; i++) {
+       let num = Math.random() * 10;
+       Math.floor(num);
+       res += num;
+    }
+    answer.value = res;
+    attempt.value = 0;
+}
 //implement new functions here
