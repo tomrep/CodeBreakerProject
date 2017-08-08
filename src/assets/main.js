@@ -68,3 +68,13 @@ function getResults(result) {
         return false;
     }
 }
+
+function showAnswer(result){
+    let code = document.getElementById('code');
+    code.innerHTML = answer.value;
+    if(result) {
+        code.className = 'success';
+    } else {
+        code.className = 'failure';
+    }
+}
