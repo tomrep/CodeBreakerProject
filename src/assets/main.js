@@ -9,7 +9,7 @@ function setHiddenFields() {
     let res = "";
     for(let i = 0; i < 3; i++) {
        let num = Math.random() * 10;
-       Math.floor(num);
+       num = Math.floor(num);
        res += num;
     }
     answer.value = res;
