@@ -38,7 +38,7 @@ function validateInput(input) {
 }
 
 function getResults(result) {
-    let results = document.getEleemntById('results');
+    let results = document.getElementById('results');
     let div = '<div class="row"><span class="col-md-6">' + result + '</span><div class="col-md-6">'
     for(let i = 0; i < 4; i++) {
         if(result.charAt(i) === answer.value.charAt(i)) {
