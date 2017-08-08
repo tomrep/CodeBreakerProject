@@ -13,9 +13,13 @@ function guess() {
     }
     if(getResults(input.value)) {
         setMessage("You win! :)");
+        showAnswer(true);
+        showReplay();
     } else {
         if(attempt.value >= 10) {
             setMessage("You lose! :(");
+            showAnswer(false);
+            showReplay();
         } else {
             setMessage("Incorrect, try again.");
         }
@@ -77,4 +81,9 @@ function showAnswer(result){
     } else {
         code.className = 'failure';
     }
+}
+
+function showReplay() {
+    document.getElementById('guessing-div').style.display = none;
+    document.getElementById('replay-div').style.display = block;
 }
